@@ -2,21 +2,21 @@ import Card from "./Card.jsx";
 import Column from "./Column.jsx";
 
 export default function Main() {
-    return (
-        <main className="main">
+	return (
+		<main className="main">
 			<div className="container">
-				
+
 				<div className="main__block">
 					<div className="main__content">
-                        <Column/>
-                        
+						<Column />
+
 						<div className="main__column">
 							<div className="column__title">
 								<p>Нужно сделать</p>
 							</div>
 							<div className="cards">
 								<div className="cards__item">
-									<Card/>
+									<Card />
 								</div>
 							</div>
 						</div>
@@ -26,15 +26,15 @@ export default function Main() {
 							</div>
 							<div className="cards">
 								<div className="cards__item">
-									<Card/>
+									<Card />
 								</div>
-						
+
 								<div className="cards__item">
-									<Card/>
+									<Card />
 								</div>
-						
+
 								<div className="cards__item">
-									<Card/>
+									<Card />
 								</div>
 							</div>
 						</div>
@@ -44,7 +44,7 @@ export default function Main() {
 							</div>
 							<div className="cards">
 								<div className="cards__item">
-									<Card/>
+									<Card />
 								</div>
 							</div>
 						</div>
@@ -54,16 +54,16 @@ export default function Main() {
 							</div>
 							<div className="cards">
 								<div className="cards__item">
-									<Card/>
+									<Card />
 								</div>
 							</div>
 						</div>
-				
-						
+
+
 					</div>
-				
+
 				</div>
 			</div>
 		</main>
-    )
+	)
 }
