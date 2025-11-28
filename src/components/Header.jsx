@@ -1,6 +1,23 @@
+import { useEffect } from "react";
+import { useState } from "react";
 import { PopUser } from "./PopUser.jsx";
 
 export default function Header() {
+	const [openPopUser, setOpenPopUser] = useState(false)
+
+	useEffect(() => {
+		const handleClick = (event) => {
+			if (!event.target.closest('#user-set-target') && !event.target.closest('.header__user')) {
+				setOpenPopUser(false);
+			}
+		};
+
+		document.addEventListener('click', handleClick);
+		return () => {
+			document.removeEventListener('click', handleClick);
+		};
+	}, []);
+
 	return (
 		<header className="header">
 			<div className="container">
@@ -13,8 +30,16 @@ export default function Header() {
 					</div>
 					<nav className="header__nav">
 						<button className="header__btn-main-new _hover01" id="btnMainNew"><a href="#popNewCard">Создать новую задачу</a></button>
-						<a href="#user-set-target" className="header__user _hover02">Ivan Ivanov</a>
-						<PopUser />
+						<p
+							className="header__user _hover02"
+							onClick={(e) => {
+								e.stopPropagation();
+								setOpenPopUser((prev) => !prev);
+							}}
+						>
+							Ivan Ivanov
+						</p>
+						{openPopUser && <PopUser />}
 					</nav>
 				</div>
 			</div>
