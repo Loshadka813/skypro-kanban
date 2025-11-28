@@ -1,4 +1,3 @@
-import Card from "./Card.jsx";
 import Column from "./Column.jsx";
 import columns from "./arrayColumns.jsx";
 

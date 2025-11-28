@@ -9,7 +9,7 @@ export default function Column({ title, cards }) {
 			<div className="cards">
 				{cards.map((card, index) => (
 					<div className="cards__item" key={index}>
-						<Card themeText={card.themeText} themeColor={card.themeColor} />
+						<Card themeText={card.themeText} themeColor={card.themeColor} title={card.title} date={card.date} />
 					</div>
 				))}
 			</div>
