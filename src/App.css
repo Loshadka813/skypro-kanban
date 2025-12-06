@@ -755,6 +755,7 @@ body {
   color: #FFFFFF;
 }
 .header__user {
+  cursor: pointer;
   height: 20px;
   display: flex;
   flex-wrap: nowrap;
@@ -777,7 +778,6 @@ body {
   padding: 0;
 }
 .header__pop-user-set {
-  display: none;
   position: absolute;
   top: 61px;
   right: 0;
