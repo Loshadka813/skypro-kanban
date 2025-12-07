@@ -1,16 +1,15 @@
 import Column from "./Column.jsx";
-import columns from "./arrayColumns.jsx";
 
 
-export default function Main() {
+export default function Main({loading} ) {
 	return (
 		<main className="main">
 			<div className="container">
 
 				<div className="main__block">
 					<div className="main__content">
-						{columns.map((col, index) => (
-							<Column key={index} title={col.title} cards={col.cards} />
+						{["Без статуса", "Нужно сделать", "В работе", "Тестирование", "Готово"].map((title, i) => (
+							<Column loading={loading} title={title} key={i} />
 						))}
 					</div>
 
