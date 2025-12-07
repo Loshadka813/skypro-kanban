@@ -1,6 +1,4 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
 import PopNewCard from './components/PopNewCard.jsx'
 import PopBrowse from './components/PopBrowse.jsx'
 import Header from './components/Header.jsx'
@@ -8,6 +6,13 @@ import Main from './components/Main.jsx'
 import './App.css'
 
 function App() {
+	const [loading, setLoading] = useState(true)
+
+	useEffect(() => {
+		setTimeout(() => {
+			setLoading(false);
+		}, 4000);
+	}, []);
 
 	return (
 		<>
@@ -32,7 +37,7 @@ function App() {
 				<PopNewCard />
 				<PopBrowse />
 				<Header />
-				<Main />
+				<Main loading={loading} />
 
 			</div>
 		</>
